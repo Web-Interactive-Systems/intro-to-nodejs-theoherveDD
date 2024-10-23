@@ -5,6 +5,8 @@
  ./utils/constants.js and ./utils/helpers.js
  */
 
+import os from 'os';
+
 const _os = {
   name: os.type(),
   release: os.release(),
