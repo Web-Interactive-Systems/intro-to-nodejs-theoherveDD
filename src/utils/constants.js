@@ -12,3 +12,6 @@ const baz = "baz";
  - create an export of foo and bar
  - create an export of baz
  */
+
+ export { foo, bar };
+ export default baz;

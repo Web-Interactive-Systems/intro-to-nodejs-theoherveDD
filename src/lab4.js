@@ -7,11 +7,15 @@
  - Use readFile of fs module to read nameFile
  */
 
-const fs = require("fs");
+import { writeFile, readFile } from 'fs/promises';
 
-const filename = process.argv; // Todo;
-const text = process.argv; // Todo;
+const filename = process.argv[2]; // Le troisième argument est le nom du fichier
+const text = process.argv.slice(3).join(' '); // Les arguments suivants sont le texte
 
 // Todo writeFile
+await writeFile(filename, text);
 
 // Todo readFile
+
+const content = await readFile(filename, 'utf-8');
+console.log(content);
